@@ -1,7 +1,7 @@
 {
 	"name": "wms-custom-tilegrid-512x256",
 	"dependencies": {
-		"ol": "10.3.1"
+		"ol": "10.4.0"
 	},
 	"devDependencies": {
 		"vite": "^6.1.1"
