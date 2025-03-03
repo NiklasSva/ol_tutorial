@@ -60,7 +60,7 @@ document.getElementById('search-button').addEventListener('click', () =>
 				'EPSG:3857',
 				{'INFO_FORMAT': 'application/json', 'QUERY_LAYERS': 'topp:states', 'FEATURE_COUNT': 1}
 			);
-			
+
 			if (url)
 			{
 				fetch(url)
@@ -85,36 +85,4 @@ document.getElementById('search-button').addEventListener('click', () =>
 			}
 		}
 	});
-
-/*
-
-document.getElementById('search-button').addEventListener('click', () => {
-  const searchInput = document.getElementById('search-input').value;
-  if (searchInput) {
-    const viewResolution = map.getView().getResolution();
-    const url = wmsSource.getFeatureInfoUrl(
-      map.getView().getCenter(),
-      viewResolution,
-      'EPSG:3857',
-      { 'INFO_FORMAT': 'application/json', 'QUERY_LAYERS': 'topp:states', 'FEATURE_COUNT': 1 }
-    );
-    if (url) {
-      fetch(url)
-        .then(response => response.json())
-        .then(data => {
-          if (data.features.length > 0) {
-            const feature = data.features[0];
-            const coordinates = feature.geometry.coordinates;
-            const lonLat = toLonLat(coordinates);
-            map.getView().setCenter(coordinates);
-            map.getView().setZoom(10);
-            alert(`Feature found: ${feature.properties.name}`);
-          } else {
-            alert('No features found');
-          }
-        });
-    }
-  }
-});
-
-*/
+	
